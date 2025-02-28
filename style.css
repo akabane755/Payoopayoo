@@ -1,0 +1,7 @@
+.clickedButton{
+     border: 1px solid rgb(8, 116, 242);
+     background: rgba(8, 116, 242, 0.05);
+     font-weight: 600;
+     color:#0874F2;
+    
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <div class="max-w-xl lg:max-w-screen-md mx-auto bg-[#F4F5F7] min-h-screen ">
+        <div class="bg-[white] pb-[40px] rounded-2xl">
+            <div  class="flex justify-between items-center p-[5%] mx-auto border-b-2 border-b-gray-300">
+              <div  class="flex"> 
+                  <img src="assets/Group.png" alt="" class=" h-[48px]">
+                  <div>
+                      <p  class="text-lg font-extrabold">$<span id="tAmount">45000</span></p>
+                      <p class="text-[#08080880]">Available Balance</p>
+                  </div>
+              </div>
+              <button id="logout"class="btn flex "> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_11_2930)">
+                      <path d="M8.33333 6.66659V4.99992C8.33333 4.55789 8.50892 4.13397 8.82148 3.82141C9.13404 3.50885 9.55797 3.33325 9.99999 3.33325H15.8333C16.2754 3.33325 16.6993 3.50885 17.0118 3.82141C17.3244 4.13397 17.5 4.55789 17.5 4.99992V14.9999C17.5 15.4419 17.3244 15.8659 17.0118 16.1784C16.6993 16.491 16.2754 16.6666 15.8333 16.6666H9.99999C9.55797 16.6666 9.13404 16.491 8.82148 16.1784C8.50892 15.8659 8.33333 15.4419 8.33333 14.9999V13.3333" stroke="#666768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.5 10H2.5L5 7.5" stroke="#666768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5 12.5L2.5 10" stroke="#666768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_11_2930">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                      <p class="text-[#08080880]">Log Out</p>
+              </button>
+            
+            </div>
+            <div class="p-[5%] bg-[rgb(244, 245, 247)]">
+              <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+              <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </div>
+            <div class="grid grid-cols-3 gap-2 px-[5%] text-center ">
+              <div id="addMoney" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%] ">
+              <img src="assets/wallet1.png" alt="" >
+               <p >Add Money</p>
+               </div>
+               <div id="cashOut" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%]">
+                  <img src="assets/send1.png" alt="" >
+                   <p >Cashout</p>
+                   </div>
+                   <div id="transferMoney" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%]">
+                      <img src="assets/money1.png" alt="" >
+                       <p >Transfer Money</p>
+                       </div>
+                       <div id="getBonus" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%]">
+                          <img src="assets/bonus1.png" alt="" >
+                           <p >Get Bonus</p>
+                           </div>
+                           <div id="payBill" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%]">
+                              <img src="assets/purse1.png" alt="" >
+                               <p >Pay Bill</p>
+                               </div>
+                               <div id="transaction" class="border rounded-xl flex flex-col justify-center items-center border-gray-300 py-[10%]">
+                                  <img src="assets/transaction1.png" alt="" >
+                                   <p >Transaction</p>
+                                   </div>
+            </div>
+          </div>
+  <div >
+    <div id="defaultbox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <div class="flex justify-between items-center">
+        <p class="font-semibold text-xl" >Latest Payment</p>
+        <p class="text-[#08080880] font-medium ">View All</p>
+    </div>
+    <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Electricity Bill</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Bank Deposit</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Mobile Recharge</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Gas Bill</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+    </div>
+    <div id="addMoneybox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <div>
+      <p class="font-semibold text-xl">Add Money</p>
+    <div class="hero bg-white rounded-3xl m-0 p-0 mt-[20px] ">
+        <div class="hero-content  w-full mt-0 ">
+        
+          <div class="card bg-base-100 w-[100%] p-0 shrink-0 ">
+            <form class="card-body ">
+                <p class="text-black font-medium">Select a bank</p>
+                <select class="select select-ghost rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 w-full text-[#080808]">
+                    <option disabled selected>Select a bank</option>
+                    <option>Shonali bank</option>
+                    <option>Rupali bank</option>
+                    <option>matir bank</option>
+                  </select>
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black font-medium">Bank Account Number</label>
+                <input id="accNo"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter 11 digit account number" required />
+                <label class="fieldset-label text-black font-medium">Amount to Add</label>
+                <input id="amount"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Add Amount to withdraw" required />
+                <label class="fieldset-label text-black font-medium">4 digit pin</label>
+                <input id="pass" class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none"type="number" class="input" placeholder="Enter 4 digit pin" required />
+                
+                <button id="add" class="border-none btn btn-neutral mt-4 bg-[#0874F2] rounded-[32px] text-xl text-white h-[53px]">Add Money</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="cashoutbox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <p class="font-semibold text-xl">Cash Out</p>
+    <div class="hero bg-base-200  rounded-3xl mt-0 pt-0 ">
+        <div class="hero-content  w-full mt-0 ">
+        
+          <div class="card bg-base-100 w-[100%] p-0 shrink-0 ">
+            <form class="card-body ">
+                
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black font-medium">Agent Number</label>
+                <input id="caccNo"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter 11 digit account number" required />
+                <label class="fieldset-label text-black font-medium">Amount to Add</label>
+                <input id="camount"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter Amount to withdraw" required />
+                <label class="fieldset-label text-black font-medium">4 digit pin</label>
+                <input id="cpass" class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none"type="number" class="input" placeholder="Enter 4 digit pin" required />
+                
+                <button id="csubtract" class="border-none btn btn-neutral mt-4 bg-[#0874F2] rounded-[32px] text-xl text-white h-[53px]">Withdraw Money</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id="transferMoneybox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <p class="font-semibold text-xl">Transfer Money</p>
+    <div class="hero bg-base-200  rounded-3xl mt-0 pt-0 ">
+        <div class="hero-content  w-full mt-0 ">
+        
+          <div class="card bg-base-100 w-[100%] p-0 shrink-0 ">
+            <form class="card-body ">
+                
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black font-medium">User Account Number</label>
+                <input id="taccNo"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter 11 digit account number" required />
+                <label class="fieldset-label text-black font-medium">Amount to Add</label>
+                <input id="ttamount"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter Amount to transfer" required />
+                <label class="fieldset-label text-black font-medium">4 digit pin</label>
+                <input id="tpass" class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none"type="number" class="input" placeholder="Enter 4 digit pin" required />
+                
+                <button id="tsubtract" class="border-none btn btn-neutral mt-4 bg-[#0874F2] rounded-[32px] text-xl text-white h-[53px]">Send Now</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id="getBonusbox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <div>
+      <p class="font-semibold text-xl">Get Bonus</p>
+    <div class="hero bg-white rounded-3xl m-0 p-0 mt-[20px] ">
+        <div class="hero-content  w-full mt-0 ">
+        
+          <div class="card bg-base-100 w-[100%] p-0 shrink-0 ">
+            <form class="card-body ">
+               
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black font-medium">Enter Bonus Coupon</label>
+                <input id="accNo"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter account number" required />
+                
+                
+                <button id="addbonus" class="border-none btn btn-neutral mt-4 bg-[#0874F2] rounded-[32px] text-xl text-white h-[53px]">Get Bonus</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="payBillbox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <div>
+      <p class="font-semibold text-xl">Pay Bill</p>
+    <div class="hero bg-white rounded-3xl m-0 p-0 mt-[20px] ">
+        <div class="hero-content  w-full mt-0 ">
+        
+          <div class="card bg-base-100 w-[100%] p-0 shrink-0 ">
+            <form class="card-body ">
+                <p class="text-black font-medium">Select To Pay</p>
+                <select class="select select-ghost rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 w-full text-[#080808]">
+                    <option disabled selected>Select a bank</option>
+                    <option>Shonali bank</option>
+                    <option>Rupali bank</option>
+                    <option>matir bank</option>
+                  </select>
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black font-medium">Biller Account Number</label>
+                <input id="paccNo"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Enter account number" required />
+                <label class="fieldset-label text-black font-medium">Amount To Pay</label>
+                <input id="pamount"  class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none" type="number" class="input" placeholder="Add amount to pay" required />
+                <label class="fieldset-label text-black font-medium">4 digit pin</label>
+                <input id="ppass" class="rounded-[32px] bg-[#F4F5F7] h-[52px] pl-4 border-none"type="number" class="input" placeholder="Enter 4 digit pin" required />
+                
+                <button id="psubtract" class="border-none btn btn-neutral mt-4 bg-[#0874F2] rounded-[32px] text-xl text-white h-[53px]">Pay Now</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="transactionbox" class="space-y-4 px-[5%] mt-[40px] bg-[#F4F5F7] pb-[70px]">
+    <div class="flex justify-between items-center">
+        <p class="font-semibold text-xl" >Transaction History</p>
+        <p class="text-[#08080880] font-medium ">View All</p>
+    </div>
+    <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Electricity Bill</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Bank Deposit</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Mobile Recharge</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+      <div  class="flex justify-between items-center px-[5%] py-[2%] mx-auto border-1 border-gray-300 rounded-xl">
+        <div  class="flex gap-5"> 
+            <div class="rounded-[50%] flex justify-center items-center bg-gray-300">
+            <img src="assets/wallet1.png" alt="" class="w-[100%] m-[15px]">
+        </div>
+            <div>
+                <p  class="text-lg font-semibold">Gas Bill</p>
+                <p class="text-[#08080880]">Today 01:44 AM</p>
+            </div>
+        </div>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_11_2954)">
+            <path d="M11 12.25C11 12.5152 11.1054 12.7696 11.2929 12.9571C11.4804 13.1446 11.7348 13.25 12 13.25C12.2652 13.25 12.5196 13.1446 12.7071 12.9571C12.8946 12.7696 13 12.5152 13 12.25C13 11.9848 12.8946 11.7304 12.7071 11.5429C12.5196 11.3554 12.2652 11.25 12 11.25C11.7348 11.25 11.4804 11.3554 11.2929 11.5429C11.1054 11.7304 11 11.9848 11 12.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 19.25C11 19.5152 11.1054 19.7696 11.2929 19.9571C11.4804 20.1446 11.7348 20.25 12 20.25C12.2652 20.25 12.5196 20.1446 12.7071 19.9571C12.8946 19.7696 13 19.5152 13 19.25C13 18.9848 12.8946 18.7304 12.7071 18.5429C12.5196 18.3554 12.2652 18.25 12 18.25C11.7348 18.25 11.4804 18.3554 11.2929 18.5429C11.1054 18.7304 11 18.9848 11 19.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 5.25C11 5.51522 11.1054 5.76957 11.2929 5.95711C11.4804 6.14464 11.7348 6.25 12 6.25C12.2652 6.25 12.5196 6.14464 12.7071 5.95711C12.8946 5.76957 13 5.51522 13 5.25C13 4.98478 12.8946 4.73043 12.7071 4.54289C12.5196 4.35536 12.2652 4.25 12 4.25C11.7348 4.25 11.4804 4.35536 11.2929 4.54289C11.1054 4.73043 11 4.98478 11 5.25Z" stroke="#080808" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_11_2954">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.25)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+      
+      </div>
+    </div>
+  </div>
+  <script src="script/main.js"></script>
+  <script src="script/cashout.js"></script>
+  <script src="script/addMoney.js"></script>
+  <script src="script/getBonus.js"></script>
+  <script src="script/transaction.js"></script>
+  
+  
+</div>
+</body>
+</html>
